@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Quotes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tutorial Section -->
+    <div id="tutorial" class="tutorial-container">
+        <h1>Welcome to Motivational Quotes</h1>
+        <p>Your daily dose of positivity! Click the button below to explore unique thoughts.</p>
+        <p>Created with ❤️ by <strong>Tanmay</strong>.</p>
+        <button id="start-btn" class="start-btn">Start Exploring</button>
+    </div>
+
+    <!-- Main App Section -->
+    <div id="app" class="app-container hidden">
+        <!-- Thought Display -->
+        <div id="quote-container" class="quote-container">
+            <p id="quote" class="quote-text">Loading your motivational thought...</p>
+            <p id="author" class="quote-author"></p>
+        </div>
+
+        <!-- Navigation Button -->
+        <button id="next-btn" class="next-btn" disabled>Next Thought</button>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with ❤️ in India by <strong>Tanmay</strong></p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
