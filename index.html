@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Show loading screen for 2 seconds
+    window.onload = function() {
+        const loadingScreen = document.getElementById("loading-screen");
+        const app = document.getElementById("app");
+
+        setTimeout(() => {
+            loadingScreen.style.opacity = 0; // Fade out the loading screen
+            setTimeout(() => {
+                loadingScreen.classList.add("hidden"); // Hide the loading screen
+                app.classList.remove("hidden"); // Show the app content
+            }, 500); // Match this duration with the CSS transition duration
+        }, 2000); // 2 seconds loading time
+    };
+</script>
     <!-- Tutorial Section -->
     <div id="tutorial" class="tutorial-container">
         <h1>Welcome to Motivational Quotes</h1>
