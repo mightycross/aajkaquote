@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the best motivational thoughts and inspirational quotes in English and Hindi. Perfect for school assemblies or daily positivity.">
+    <meta name="keywords" content="motivational quotes, quotes in English, inspirational quotes, motivational thoughts, thoughts for school assembly, positive thoughts, success quotes, daily quotes, life quotes, Hindi quotes, English quotes">
+    <meta name="author" content="Tanmay7065">
+    <title>Motivational Quotes | English & Hindi Thoughts</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
+        user-select: none; /* Prevent text selection */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+    }
+    </style>
+</head>
+<body>
+    <!-- Tutorial Section -->
+    <div id="tutorial" class="tutorial-container">
+        <h1>Welcome to Motivational Quotes</h1>
+        <p>Your daily dose of positivity! Click the button below to explore unique thoughts in English and Hindi.</p>
+        <p>Created with ❤️ by <strong>Tanmay</strong>.</p>
+        <button id="start-btn" class="start-btn">Start Exploring</button>
+    </div>
+
+    <!-- Main App Section -->
+    <div id="app" class="app-container hidden">
+        <!-- Thought Display -->
+        <div id="quote-container" class="quote-container">
+            <p id="quote" class="quote-text">Loading your motivational thought...</p>
+            <p id="author" class="quote-author"></p>
+        </div>
+
+        <!-- Navigation Button -->
+        <button id="next-btn" class="next-btn" disabled>Next Thought</button>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with ❤️ in India by <strong>Tanmay</strong></p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+    // Prevent right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Prevent keyboard shortcuts (Ctrl+C, Ctrl+X, etc.)
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && (e.key === 'c' || e.key === 'x')) {
+            e.preventDefault();
+        }
+    });
+    </script>
+</body>
+</html>
