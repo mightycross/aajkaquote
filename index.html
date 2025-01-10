@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find top motivational thoughts and inspirational quotes in English and Hindi. Boost positivity, success, and happiness daily with powerful quotes.">
-    <meta name="keywords" content="motivational thoughts, inspirational quotes, positive thoughts, success quotes, daily motivational quotes, English thoughts, Hindi quotes, thoughts for life, positivity quotes, motivational sayings">
+    <meta name="description" content="Discover motivational thoughts and inspirational quotes to inspire positivity, success, and happiness every day.">
+    <meta name="keywords" content="motivational thoughts, inspirational quotes, daily positivity, success quotes, life quotes, positive thinking, quotes in Hindi, quotes in English, motivational sayings, school assembly thoughts">
     <meta name="author" content="Tanmay7065">
-    <meta property="og:title" content="Motivational Thoughts | Daily Inspiration in English & Hindi">
-    <meta property="og:description" content="Explore daily motivational thoughts and positivity quotes to inspire success and happiness in life.">
+    <meta property="og:title" content="Motivational Thoughts | Daily Positivity & Inspiration">
+    <meta property="og:description" content="Explore motivational thoughts and daily positivity quotes to inspire success and happiness in life.">
     <meta property="og:image" content="https://example.com/motivational-banner.jpg">
     <meta property="og:url" content="https://example.com">
     <meta name="twitter:card" content="summary_large_image">
@@ -15,63 +15,40 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        h1, h2, h3 {
-            color: #ff5722;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #ff5722;
-        }
-        .quote-container {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Top Motivational Thoughts to Inspire Your Day</h1>
-        <p>Welcome to your hub for positivity, success, and daily inspiration. Dive into the world of <span class="highlight">motivational quotes</span> and <span class="highlight">uplifting thoughts</span>.</p>
-    </header>
-
     <!-- Tutorial Section -->
-    <section>
-        <h2>Why Motivational Thoughts Matter</h2>
-        <p>Motivational thoughts are not just words; they inspire action and bring positivity to life. Explore our curated quotes and ideas to transform your mindset.</p>
-    </section>
+    <div id="tutorial" class="tutorial-container">
+        <h1>Motivational Thoughts to Inspire You</h1>
+        <p>Your daily dose of positivity! Click the button below to explore unique thoughts in English and Hindi.</p>
+        <p>Created with ❤️ by <strong>Tanmay</strong>.</p>
+        <button id="start-btn" class="start-btn">Start Exploring</button>
+    </div>
 
-    <!-- Featured Quotes -->
-    <section>
-        <h2>Featured Quotes</h2>
-        <div class="quote-container">
-            <p>"The best way to predict the future is to create it." - Abraham Lincoln</p>
+    <!-- Main App Section -->
+    <div id="app" class="app-container hidden">
+        <!-- Thought Display -->
+        <div id="quote-container" class="quote-container">
+            <h2>Daily Inspirational Thought</h2>
+            <p id="quote" class="quote-text">Loading your motivational thought...</p>
+            <h3 id="author" class="quote-author"></h3>
         </div>
-        <div class="quote-container">
-            <p>"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill</p>
-        </div>
-        <div class="quote-container">
-            <p>"Believe you can and you're halfway there." - Theodore Roosevelt</p>
-        </div>
-    </section>
 
-    <!-- Call to Action -->
-    <section>
-        <h2>Start Your Day with Positivity</h2>
-        <p>Looking for a fresh perspective? Browse through our collection of <span class="highlight">motivational quotes</span> to uplift your spirits.</p>
-        <button id="explore-btn" class="start-btn">Explore Now</button>
-    </section>
+        <!-- Navigation Button -->
+        <button id="next-btn" class="next-btn" disabled>Next Thought</button>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Motivational Thoughts | Made with ❤️ in India by Tanmay.</p>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Motivational Thoughts by Tanmay | All rights reserved.</p>
+            <p>Boost your day with <strong>motivational quotes</strong> and <strong>daily inspiration</strong>.</p>
+        </footer>
+    </div>
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -85,6 +62,22 @@
             "name": "Motivational Thoughts by Tanmay"
         }
     }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Prevent right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Prevent keyboard shortcuts (Ctrl+C, Ctrl+X, etc.)
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x')) {
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
